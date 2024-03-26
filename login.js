@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
-            const token = data.token;
+            const token = data.accessToken;
+
             window.alert(token);
         })
         .catch(error => {
