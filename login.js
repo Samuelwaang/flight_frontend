@@ -20,10 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => {
             return response.json();
         })
-        .then(data => {
-            const token = data.accessToken;
+        // .then(data => {
+        //     const token = data.accessToken;
 
-            window.alert(token);
+        //     window.alert(token);
+        // })
+        .then(json => {
+            console.log(json);
         })
         .catch(error => {
             window.alert("error");
