@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <script src = "login.js"></script>
+  <script>
+    function getCookie() {
+      console.log("cookie: ");
+      console.log(document.cookie);
+    }
+  </script>
 </head>
 <body>
   <main>
@@ -15,6 +21,7 @@
       <input type="password" id="password" name="password"><br><br>
       <button type="submit">Login</button>
     </form>
+    <button onclick="getCookie()">ddd</button>
   </main>
 
 </body>
