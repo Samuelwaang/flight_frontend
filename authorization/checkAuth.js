@@ -10,7 +10,7 @@ for (let cookie of cookies) {
 fetch('http://localhost:8080/api/auth/login', {
     method: 'GET',
     headers: {
-        'jwt': token
+        'jwt': jwt
     }
     .then(response => {
         if (response.ok) {
