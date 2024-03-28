@@ -7,12 +7,10 @@
   <script src = "authorization/login.js"></script>
   <script>
     function listCookies() {
-        var theCookies = document.cookie.split(';');
-        var aString = '';
-        for (var i = 1 ; i <= theCookies.length; i++) {
-            aString += i + ' ' + theCookies[i-1] + "\n";
-        }
-        console.log(aString);
+      const cookies = document.cookie.split('; ');
+      cookies.forEach(cookie => {
+          console.log(cookie);
+      });
     }
   </script>
 </head>
