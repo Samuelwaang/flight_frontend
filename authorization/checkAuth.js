@@ -12,11 +12,11 @@ fetch('http://localhost:8080/api/auth/login', {
     headers: {
         'jwt': jwt
     }
-    .then(response => {
-        if (response.ok) {
-            console.log("success");
-        } else {
-            console.log("fail");
-        }
-    })
+})
+.then(response => {
+    if (response.ok) {
+        console.log("success");
+    } else {
+        console.log("fail");
+    }
 })
