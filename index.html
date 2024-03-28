@@ -6,9 +6,13 @@
   <title>Login Page</title>
   <script src = "authorization/login.js"></script>
   <script>
-    function getCookie() {
-      console.log("cookie: ");
-      console.log(document.cookie);
+    function listCookies() {
+        var theCookies = document.cookie.split(';');
+        var aString = '';
+        for (var i = 1 ; i <= theCookies.length; i++) {
+            aString += i + ' ' + theCookies[i-1] + "\n";
+        }
+        return aString;
     }
   </script>
 </head>
@@ -21,7 +25,7 @@
       <input type="password" id="password" name="password"><br><br>
       <button type="submit">Login</button>
     </form>
-    <button onclick="getCookie()">ddd</button>
+    <button onclick="listCookies()">ddd</button>
   </main>
 
 </body>
