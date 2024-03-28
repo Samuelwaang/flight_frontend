@@ -7,7 +7,7 @@ for (let cookie of cookies) {
     }
 }
 
-fetch('http://localhost:8080/api/auth/login', {
+fetch('http://localhost:8080/api/auth/login/check-auth', {
     method: 'GET',
     headers: {
         'jwt': jwt
