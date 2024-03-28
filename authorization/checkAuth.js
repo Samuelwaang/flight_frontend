@@ -1,4 +1,11 @@
-const jwt = getCookie('jwt');
+const jwt = "";
+const cookies = document.cookie.split(';');
+for (let cookie of cookies) {
+    const [name, value] = cookie.trim().split('=');
+    if (name === 'jwt') {
+        jwt = value;
+    }
+}
 
 fetch('http://localhost:8080/api/auth/login', {
     method: 'GET',
