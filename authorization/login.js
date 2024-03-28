@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         fetch('http://localhost:8080/api/auth/login', {
             method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
