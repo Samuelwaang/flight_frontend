@@ -7,11 +7,8 @@ const jwt = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzExNjYzMjA1LCJleH
 //     }
 // }
 
-fetch('http://localhost:8080/api/auth/login/check-auth', {
-    method: 'GET',
-    headers: {
-        'jwt': jwt
-    }
+fetch('http://localhost:8080/test', {
+    method: 'GET'
 })
 .then(response => {
     if (response.ok) {
