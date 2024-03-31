@@ -1,4 +1,4 @@
-const jwt = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzExNjYzMjA1LCJleHAiOjE3MTE2NjMyNzV9.5paeuRV9NKcWMNRb1wdacUtc4Pwzw-up3xJo_guEpSIGgYzN6cY9YnFBLMMEVWCUhpmCUR4-U8Bi1HU7KkOZxg";
+// const jwt = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzExNjYzMjA1LCJleHAiOjE3MTE2NjMyNzV9.5paeuRV9NKcWMNRb1wdacUtc4Pwzw-up3xJo_guEpSIGgYzN6cY9YnFBLMMEVWCUhpmCUR4-U8Bi1HU7KkOZxg";
 // const cookies = document.cookie.split(';');
 // for (let cookie of cookies) {
 //     const [name, value] = cookie.trim().split('=');
@@ -7,8 +7,9 @@ const jwt = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzExNjYzMjA1LCJleH
 //     }
 // }
 
-fetch('http://localhost:8080/test', {
-    method: 'GET'
+fetch('http://localhost:8080/api/auth/check-auth', {
+    method: 'GET',
+    credentials: 'include'
 })
 .then(response => {
     if (response.ok) {
